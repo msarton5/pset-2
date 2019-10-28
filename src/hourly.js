@@ -1,0 +1,19 @@
+const readlineSync = require("readline-sync");
+let Hourly_Wage = readlineSync.question("\nHourly Wage: ");
+let Monday_Hours = readlineSync.question("\nMonday: ");
+const M_Wage = (Monday_Hours*Hourly_Wage)
+let Tuesday_Hours = readlineSync.question("Tuesday: ");
+const T_Wage = (Tuesday_Hours*Hourly_Wage)
+let Wednesday_Hours = readlineSync.question("Wednesday: ");
+const W_Wage = (Wednesday_Hours*Hourly_Wage)
+let Thursday_Hours = readlineSync.question("Thursday: ");
+const Th_Wage = (Thursday_Hours*Hourly_Wage)
+let Friday_Hours = readlineSync.question("Friday: ");
+const F_Wage = (Friday_Hours*Hourly_Wage)
+let Saturday_Hours = readlineSync.question("Saturday: ");
+const S_Wage = (Saturday_Hours*Hourly_Wage)
+let Sunday_Hours = readlineSync.question("Sunday: ");
+const Su_Wage = (Sunday_Hours*Hourly_Wage)
+let Weekly_Earnings = (M_Wage + T_Wage + W_Wage + Th_Wage + F_Wage + S_Wage + Su_Wage)
+Weekly_Earnings = Weekly_Earnings.toLocaleString("en" , { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+console.log("\nYou'll make $" + Weekly_Earnings + " this week." );
